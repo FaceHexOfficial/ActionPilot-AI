@@ -447,15 +447,105 @@ https://github.com/FaceHexOfficial/ActionPilot-AI
 
 # 📸 Screenshots
 
-Add screenshots here:
+Explore ActionPilot AI's modern interface and intelligent productivity features.
 
-* Dashboard
-* AI Chat
-* Voice Assistant
-* Analytics
-* Email Agent
-* Daily Digest
-* Settings
+---
+
+## 🏠 Dashboard
+
+The intelligent command center displaying AI insights, productivity score, focus time, milestones, and quick task creation.
+
+![Dashboard](Screenshots/1%20(10).png)
+
+---
+
+## ✅ Task Management Center
+
+Create, organize, prioritize, and manage execution slots with AI-assisted scheduling.
+
+![Tasks](Screenshots/1%20(9).png)
+
+---
+
+## 🤖 AI Automations
+
+Launch the ActionPilot AI Copilot to automate planning, summarize activities, and intelligently manage productivity.
+
+![Automations](Screenshots/1%20(8).png)
+
+---
+
+## 📅 AI Calendar Station
+
+Manage milestones, deadlines, holidays, recurring events, and AI-generated schedules in one place.
+
+![Calendar](Screenshots/1%20(7).png)
+
+---
+
+## 📊 Productivity Analytics
+
+Gain deep insights into task completion, focus time, AI time saved, and overall productivity trends.
+
+![Analytics](Screenshots/1%20(6).png)
+
+---
+
+## ⚙️ Settings — Profile
+
+Manage your profile and account preferences.
+
+![Profile Settings](Screenshots/1%20(5).png)
+
+---
+
+## 🎨 Appearance Settings
+
+Switch between Light, Dark, and System themes.
+
+![Appearance](Screenshots/1%20(4).png)
+
+---
+
+## 🔔 Smart Notifications
+
+Configure battery alerts, charging notifications, and voice reminders.
+
+![Notifications](Screenshots/1%20(3).png)
+
+---
+
+## 🔑 Gemini API Configuration
+
+Securely connect your own Google Gemini API Key for private AI-powered execution.
+
+![Gemini API](Screenshots/1%20(2).png)
+
+---
+
+## 🎉 Events & Milestones
+
+Track birthdays, anniversaries, milestones, and important life events with AI reminders.
+
+![Events](Screenshots/1%20(1).png)
+
+---
+
+## ✨ Complete User Experience
+
+ActionPilot AI combines:
+
+- 🧠 Google Gemini AI
+- 🎙️ Voice-to-Task Extraction
+- 📬 Smart Email Analysis
+- 📅 AI Calendar Planning
+- 📊 Productivity Analytics
+- ⚡ Intelligent Prioritization
+- 🔒 Secure API Key Management
+- 🤖 AI Execution Assistant
+- ☁️ Google Cloud Deployment
+
+Designed with a modern, minimal, productivity-first interface focused on helping users accomplish more before deadlines are missed.
 
 ---
 
@@ -484,7 +574,7 @@ Add screenshots here:
 
 **GitHub**
 
-[https://github.com/FaceHexOfficial](https://github.com/Guman-Rajpurohit)
+[https://github.com/Guman-Rajpurohit](https://github.com/Guman-Rajpurohit)
 
 ---
 
