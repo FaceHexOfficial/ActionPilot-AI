@@ -2,6 +2,8 @@
       
 # 🚀 ActionPilot AI
 
+</div>
+
 <div align="center">
 
 ## **Your AI Execution Partner — Plan Less. Accomplish More.**
