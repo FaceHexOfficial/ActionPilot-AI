@@ -484,7 +484,7 @@ Add screenshots here:
 
 **GitHub**
 
-https://github.com/FaceHexOfficial
+[https://github.com/FaceHexOfficial](https://github.com/Guman-Rajpurohit)
 
 ---
 
