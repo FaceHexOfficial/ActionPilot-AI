@@ -41,6 +41,7 @@ import { useNavigate } from 'react-router';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 import ActivityLogWidget from '../components/ActivityLogWidget';
 import DailyDigestWidget from '../components/DailyDigestWidget';
+import ActionableBriefWidget from '../components/ActionableBriefWidget';
 import VoiceCommand from '../components/VoiceCommand';
 import { logActivity } from '../lib/activity';
 import { Task } from '../types';
@@ -1618,6 +1619,9 @@ export default function Dashboard({ user }: DashboardProps) {
               )}
             </CardContent>
           </Card>
+
+          {/* Actionable Spoken Daily Brief */}
+          <ActionableBriefWidget todayPendingTasks={todayTasks.filter(t => t.status !== 'Completed' && t.status !== 'Skipped')} />
 
           {/* Daily AI summary */}
           <DailyDigestWidget />

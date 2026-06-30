@@ -418,6 +418,51 @@ app.post('/api/ai/daily-digest', async (req, res) => {
   }
 });
 
+app.post('/api/ai/today-brief', async (req, res) => {
+  try {
+    const aiClient = getAI(req);
+    const { tasks } = req.body;
+
+    const response = await generateContentWithRetry(aiClient, {
+      model: 'gemini-3.5-flash',
+      contents: `You are ActionPilot AI, an elite executive assistant.
+      The user wants a concise, highly motivating spoken audio brief summarizing all of today's pending tasks.
+      Here are today's pending tasks in JSON:
+      ${JSON.stringify(tasks, null, 2)}
+
+      Please summarize these tasks into a single actionable brief (2 to 4 sentences maximum).
+      The summary must be written specifically to be read out loud using text-to-speech.
+      IMPORTANT RULES:
+      - Keep it natural, warm, conversational, and energetic.
+      - NEVER use bullet points, asterisks, markdown syntax, or special characters.
+      - Do NOT use abbreviations that sound weird when spoken.
+      - Focus on what needs to be done today and end with a quick boost of motivation.
+
+      Return a simple JSON object matching this structure:
+      {
+        "brief": "The fully formatted spoken brief text"
+      }`,
+      config: {
+        responseMimeType: "application/json",
+      }
+    });
+
+    const result = JSON.parse(response.text || '{}');
+    res.json(result);
+  } catch (error: any) {
+    const isRateLimit = error.status === 429 || error.message?.includes('429') || error.message?.includes('Quota') || error.error?.code === 429;
+    const isTransientError = error.status === 503 || error.status === 500 || error.error?.code === 503 || error.error?.code === 500 || error.message?.includes('503') || error.message?.includes('500') || error.message?.includes('UNAVAILABLE') || error.message?.includes('unavailable');
+
+    if (!isRateLimit && !isTransientError) {
+      console.error("Error generating today's actionable brief:", error);
+    }
+
+    // Friendly speech fallback
+    const fallbackMessage = "You have some important tasks today. Let's make today incredibly productive, one step at a time!";
+    res.json({ brief: fallbackMessage });
+  }
+});
+
 app.post('/api/ai/coach', async (req, res) => {
   try {
     const aiClient = getAI(req);
